@@ -1,0 +1,107 @@
+---
+title: "dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+
+library(p8105.datasets)
+data("ny_noaa")
+```
+
+```{r}
+# tidy data
+
+ny_data = 
+  ny_noaa %>% 
+  drop_na() %>% 
+  
+  mutate(date, date = as.character(date)) %>% 
+  
+  separate(date, into = c('year', 'month', 'day')) %>% 
+  
+  mutate(prcp, prcp = as.numeric(prcp)) %>% 
+  mutate(snow, snow = as.numeric(snow)) %>% 
+  mutate(snwd, snwd = as.numeric(snwd)) %>% 
+  mutate(tmax, tmax = as.numeric(tmax)) %>% 
+  mutate(tmin, tmin = as.numeric(tmin)) %>% 
+  
+  mutate(
+    tmax = tmax / 10,
+    tmin = tmin / 10, 
+    prcp = prcp / 10
+  ) 
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A -- scatterplot
+
+```{r}
+# scatterplot
+
+
+ny_data %>% 
+  filter(prcp < 500) %>%  # omit some outliers
+  group_by(year, month, prcp, tmax) %>% 
+  summarize(
+    mean_tmax = mean(tmax, na.rm = TRUE),
+    mean_prcp = mean(prcp, na.rm = TRUE)
+  ) %>% 
+  
+  mutate(text_label = str_c("Mean of maximum temperature: ", mean_tmax, " degrees C", "\nMean of prescription: ", mean_prcp, " mm", "\nMonth:  ", month)) %>%  
+  
+
+  plot_ly(
+    y = ~mean_prcp, x = ~mean_tmax, color = ~month, text = ~text_label,
+    type = "scatter", mode = "markers", colors = "viridis", alpha = 0.5)
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B -- boxplot
+
+```{r}
+# boxplot
+
+
+ny_data %>% 
+  group_by(year, month, tmax) %>% 
+  summarize(
+    mean_tmax = mean(tmax, na.rm = TRUE)
+  ) %>% 
+  
+  
+  plot_ly(
+    x = ~month, y = ~mean_tmax, color = ~year,
+    type = "box", mode = "lines", colors = "viridis", alpha = 0.05)
+
+```
+
+### Chart C --  bar plot
+
+```{r}
+# bar plot
+
+
+ny_data %>% 
+  group_by(year, month, prcp) %>% 
+  summarize(
+    mean_prcp = mean(prcp, na.rm = TRUE)
+  ) %>% 
+ 
+  plot_ly(
+    y = ~mean_prcp, x = ~year, color = ~month,
+    type = "bar", colors = "viridis", alpha = 0.5)
+
+```
+

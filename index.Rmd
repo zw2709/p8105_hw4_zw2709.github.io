@@ -74,7 +74,48 @@ output:
 <br><br><br>
 
 
-## Data and Plot
+
+
+
+## PLOT {.tabset}
+
+### Scatterplot
+
+* mean_tmax (mean of maximum temperature) 
+* mean_prcp (mean of prescription)
+<br><br><br><br>
+
+
+[detailed information](dashboard.html)
+
+<br><br><br>
+
+
+
+
+
+### Box plot
+
+* mean_tmax (mean of maximum temperature) 
+* month
+<br><br><br><br>
+
+
+[detailed information](dashboard.html)
+
+<br><br><br>
+
+
+
+
+
+
+### Bar plot
+
+* mean_prcp (mean of prescription)
+* year
+<br><br><br><br>
+
 
 [detailed information](dashboard.html)
 
