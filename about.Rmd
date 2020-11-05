@@ -7,4 +7,47 @@ output:
  
 ---
 
-### Information about my academic and professional experience
+
+
+<font color=purple size=5> Academic and professional experience of zw2709 </font>
+
+
+<br><br>
+
+## Education
+
+
+* Columbia Mailman School of Public Health --- Biostatistics
+ 
+* University of Liverpool + Xi'an Jiaotong-Liverpool University --- Mathematics with Finance
+
+<br><br>
+
+
+
+
+
+
+
+## Work experience -- internship
+
+* Guolian Securities Co., Ltd 
+
+* AIA Group Limited (Hong Kong)
+
+* Bank of China (Wuxi BInhu Branch)
+
+<br><br>
+
+
+
+
+
+## Studies -- Academic Competition
+
+* Data Analytics and Business Strategy Competition
+
+* the Mathematical Contest in Modeling (Problem C: Energy Production)
+
+* Investment Banking, Trading and Sales Simulation Competiion
+

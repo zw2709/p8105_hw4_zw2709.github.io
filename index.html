@@ -11,7 +11,7 @@
 
 
 
-<title>About zw2709</title>
+<title>Website for zw2709</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +23,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -250,6 +251,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -377,38 +381,69 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
-
-
-<h1 class="title toc-ignore">About zw2709</h1>
-
-</div>
-
-
-<p><font color=purple size=5> Academic and professional experience of zw2709 </font></p>
-<p><br><br></p>
-<div id="education" class="section level2">
-<h2>Education</h2>
-<ul>
-<li><p>Columbia Mailman School of Public Health — Biostatistics</p></li>
-<li><p>University of Liverpool + Xi’an Jiaotong-Liverpool University — Mathematics with Finance</p></li>
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
 </ul>
-<p><br><br></p>
 </div>
-<div id="work-experience-internship" class="section level2">
-<h2>Work experience – internship</h2>
+
+
+
+<h1 class="title toc-ignore">Website for zw2709</h1>
+
+</div>
+
+
+<p><br><br></p>
+<div id="welcome" class="section level2">
+<h2>Welcome</h2>
+<p><font size=5> Hello! </font></p>
+<p><font size=5> Welcome to my website! </font></p>
+<p><img src="images/hello.png" style="width:75%"></p>
+<p><br><br><br></p>
+</div>
+<div id="brief-introduction" class="section level2">
+<h2>Brief introduction</h2>
+<p><font color=grey size=3> My name is Iris.</font></p>
+<p><font color=grey size=3> Currently I am a student of Columbia University Mailman School of Public Health.</font></p>
+<p><font color=grey size=3> My major is Biostatistics with the track of Theory and Method.</font></p>
+<p><font color=grey size=3> I am fond of this major because it combines mathematical and computational analysis with some practical applications.</font></p>
+<p><br><br><br><br></p>
+</div>
+<div id="information-about-school-and-major" class="section level2 tabset">
+<h2>Information about School and Major</h2>
+<div id="school" class="section level3">
+<h3>School</h3>
+<p><a href="https://www.publichealth.columbia.edu/">Columbia Mailman School of Public Health</a></p>
+<p><br><br><br><br></p>
+</div>
+<div id="major" class="section level3">
+<h3>Major</h3>
+<p><a href="https://www.publichealth.columbia.edu/academics/departments/biostatistics">Biostatistics</a></p>
+<p><br><br><br><br></p>
+</div>
+</div>
+<div id="personal-experience" class="section level2">
+<h2>Personal experience</h2>
+<p><font color=grey size=3> information about my academic and professional experience </font></p>
 <ul>
-<li><p>Guolian Securities Co., Ltd</p></li>
-<li><p>AIA Group Limited (Hong Kong)</p></li>
-<li><p>Bank of China (Wuxi BInhu Branch)</p></li>
+<li><a href="about.html">About zw2709</a></li>
 </ul>
-<p><br><br></p>
+<p><br><br><br></p>
 </div>
-<div id="studies-academic-competition" class="section level2">
-<h2>Studies – Academic Competition</h2>
+<div id="data-and-plot" class="section level2">
+<h2>Data and Plot</h2>
+<p><a href="dashboard.html">detailed information</a></p>
+<p><br><br><br></p>
+</div>
+<div id="other-information" class="section level2">
+<h2>Other information</h2>
 <ul>
-<li><p>Data Analytics and Business Strategy Competition</p></li>
-<li><p>the Mathematical Contest in Modeling (Problem C: Energy Production)</p></li>
-<li><p>Investment Banking, Trading and Sales Simulation Competiion</p></li>
+<li><a href="http://github.com/zw2709">github</a></li>
+<li><a href="http://google.com">search</a></li>
+<li><a href="https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00861">NOAA</a></li>
 </ul>
 </div>
 
@@ -447,6 +482,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 <script>
 $(document).ready(function ()  {

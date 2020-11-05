@@ -1,7 +1,92 @@
 ---
-title: "Holy cow!"
+title: "Website for zw2709"
+output: 
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+    
+ 
 ---
+<br><br>
 
-### I have a webpage!
 
-And I can put all kinds of stuff on it!
+
+## Welcome
+
+<font size=5> Hello! </font>
+
+<font size=5> Welcome to my website! </font>
+
+<img src="images/hello.png" style="width:75%">
+
+<br><br><br>
+
+
+
+
+## Brief introduction
+
+<font color=grey size=3> My name is Iris.</font>
+
+
+<font color=grey size=3> Currently I am a student of Columbia University Mailman School of Public Health.</font>
+
+
+<font color=grey size=3> My major is Biostatistics with the track of Theory and Method.</font>
+
+
+<font color=grey size=3> I am fond of this major because it combines mathematical and computational analysis with some practical applications.</font>
+
+<br><br><br><br>
+
+
+
+
+
+## Information about School and Major {.tabset}
+
+### School
+
+[Columbia Mailman School of Public Health](https://www.publichealth.columbia.edu/)
+
+<br><br><br><br>
+
+
+### Major
+
+[Biostatistics](https://www.publichealth.columbia.edu/academics/departments/biostatistics)
+
+<br><br><br><br>
+
+
+
+
+
+
+
+## Personal experience
+
+<font color=grey size=3> information about my academic and professional experience </font>
+
+* [About zw2709](about.html)
+
+<br><br><br>
+
+
+## Data and Plot
+
+[detailed information](dashboard.html)
+
+<br><br><br>
+
+
+
+## Other information 
+
+* [github](http://github.com/zw2709)
+* [search](http://google.com)
+* [NOAA](https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00861)
+
+
+
