@@ -16,8 +16,6 @@ data("ny_noaa")
 ```
 
 ```{r}
-# tidy data
-
 ny_data = 
   ny_noaa %>% 
   drop_na() %>% 
@@ -39,15 +37,13 @@ ny_data =
   ) 
 ```
 
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A -- scatterplot
+### Chart A -- Scatterplot
 
 ```{r}
-# scatterplot
-
-
 ny_data %>% 
   filter(prcp < 500) %>%  # omit some outliers
   group_by(year, month, prcp, tmax) %>% 
@@ -56,11 +52,11 @@ ny_data %>%
     mean_prcp = mean(prcp, na.rm = TRUE)
   ) %>% 
   
-  mutate(text_label = str_c("Mean of maximum temperature: ", mean_tmax, " degrees C", "\nMean of prescription: ", mean_prcp, " mm", "\nMonth:  ", month)) %>%  
+  mutate(text_label = str_c("Mean of maximum temperature: ", mean_tmax, " degrees C", "\nMean of precription: ", mean_prcp, " mm", "\nMonth:  ", month)) %>%  
   
 
   plot_ly(
-    y = ~mean_prcp, x = ~mean_tmax, color = ~month, text = ~text_label,
+    y = ~prcp, x = ~mean_tmax, color = ~month, text = ~text_label,
     type = "scatter", mode = "markers", colors = "viridis", alpha = 0.5)
 
 ```
@@ -68,12 +64,9 @@ ny_data %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B -- boxplot
+### Chart B -- Box plot
 
 ```{r}
-# boxplot
-
-
 ny_data %>% 
   group_by(year, month, tmax) %>% 
   summarize(
@@ -87,12 +80,9 @@ ny_data %>%
 
 ```
 
-### Chart C --  bar plot
+### Chart C -- bar plot
 
 ```{r}
-# bar plot
-
-
 ny_data %>% 
   group_by(year, month, prcp) %>% 
   summarize(
@@ -100,7 +90,7 @@ ny_data %>%
   ) %>% 
  
   plot_ly(
-    y = ~mean_prcp, x = ~year, color = ~month,
+    y = ~prcp, x = ~year, color = ~month,
     type = "bar", colors = "viridis", alpha = 0.5)
 
 ```

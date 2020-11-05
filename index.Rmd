@@ -86,7 +86,7 @@ output:
 <br><br><br><br>
 
 
-[detailed information](dashboard.html)
+[dashboard](dashboard.html)
 
 <br><br><br>
 
@@ -101,7 +101,7 @@ output:
 <br><br><br><br>
 
 
-[detailed information](dashboard.html)
+[dashboard](dashboard.html)
 
 <br><br><br>
 
@@ -117,10 +117,11 @@ output:
 <br><br><br><br>
 
 
-[detailed information](dashboard.html)
+[dashboard](dashboard.html)
 
 <br><br><br>
-
+ 
+ 
 
 
 ## Other information 
